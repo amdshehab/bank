@@ -21,4 +21,9 @@ describe('balance', function(){
   it('date returns current date', function(){
     expect(account.date()).toEqual('2017-6-14')
   })
+
+  it('can withdraw money from account', function(){
+    account.withdraw(500)
+    expect(account.balance).toEqual(-500)
+  })
 })
