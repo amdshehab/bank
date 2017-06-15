@@ -1,20 +1,20 @@
 var Printer = require('../lib/printer')
 
-beforeEach(function(){
-  printer = new Printer
-})
-
 const transactionHistory = { '2017-6-14':
    [ { type: 'credit', transactionAmount: 1000, currentBalance: 1000 },
      { type: 'debit', transactionAmount: 500, currentBalance: 500 } ] }
 
 const multipleDateHistory = {
   '2017-6-14':
-     [ { type: 'credit', transactionAmount: 1000, currentBalance: 1000 },
-       { type: 'debit', transactionAmount: 500, currentBalance: 500 } ],
+    [ { type: 'credit', transactionAmount: 1000, currentBalance: 1000 },
+      { type: 'debit', transactionAmount: 500, currentBalance: 500 } ],
   '2017-6-13':
-  [ { type: 'debit', transactionAmount: 650, currentBalance: 700 } ]
+    [ { type: 'debit', transactionAmount: 650, currentBalance: 700 } ]
 }
+
+beforeEach(function(){
+  printer = new Printer
+})
 
 describe('printer', function(){
   it('printer has a stanard message', function(){

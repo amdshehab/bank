@@ -19,7 +19,7 @@ describe('balance', function(){
   })
 
   it('date returns current date', function(){
-    expect(account.date()).toEqual('2017-6-14')
+    expect(account.date).toEqual('2017-6-15')
   })
 
   it('can withdraw money from account', function(){
@@ -30,7 +30,7 @@ describe('balance', function(){
   it('transaction history keys are date objects with arrays', function(){
     account.deposit(1000)
     account.withdraw(500)
-    expect(account.transactionHistory['2017-6-14'][0].type).toEqual('credit')
-    expect(account.transactionHistory['2017-6-14'][1].type).toEqual('debit')
+    expect(account.transactionHistory['2017-6-15'][0].type).toEqual('credit')
+    expect(account.transactionHistory['2017-6-15'][1].type).toEqual('debit')
   })
 })
